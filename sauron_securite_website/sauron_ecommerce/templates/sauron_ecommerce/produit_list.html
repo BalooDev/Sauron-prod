@@ -1,0 +1,192 @@
+{% extends "base_generic.html" %}
+{% block productfilter %}
+    <section id="allproducts" class="container-fluid min-vh-100 bg-light d-flex flex-column justify-content-center align-items-center py-5">
+        <div class="container-fluid py-5 d-flex flex-column justify-content-center align-items-center">
+            
+        <h1 class="title w-100 text-center my-3 mx-3">Tous les produits</h1>
+        <h3 class="subtitle w-100 text-center my-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, placeat!</h3>
+        
+        <div class="row filter vw-100 bg-grey text-center my-4 d-flex justify-content-center align-items-center p-4">
+        <div class="mb-3 col-sm- my-4 mx-5 px-5">
+            <div class="d-flex mx-5 px-5">
+            <input type="search" class="form-control" name="" id="recherche-produit" aria-describedby="helpId" placeholder="recherche un produit">
+            <div class="bg-dark p-2"><img src="/images/loupe.png" alt="" class="icon invert"></div>
+            </div>
+            <small id="helpId" class="form-text text-muted">affine tes recherches</small>
+        </div>
+        <div class="dropdown mx-4 my-2 col-sm-3 px-5 ">
+            <button class="dropdown-toggle btn-lg btn-filter" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Trier par
+            </button>
+            <ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Vente</a></li>
+            <li><a class="dropdown-item" href="#">Popularité</a></li>
+            <li><a class="dropdown-item" href="#">Prix décroissant</a></li>
+            <li><a class="dropdown-item" href="#">Prix croissant</a></li>
+            </ul>
+        </div>
+
+        <div class="dropdown mx-4 my-2 col-sm-3 px-5 ">
+            <button class="dropdown-toggle btn-lg btn-filter" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Définition 
+            </button>
+            <ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">HD</a></li>
+            <li><a class="dropdown-item" href="#">UHD</a></li>
+            <li><a class="dropdown-item" href="#">4k</a></li>
+            <li><a class="dropdown-item" href="#">8k</a></li>
+            </ul>
+        </div>
+
+        <div class="dropdown mx-4 my-2 col-sm-3 px-5 ">
+            <button class="dropdown-toggle btn-lg btn-filter" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Stockage 
+            </button>
+            <ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">256go</a></li>
+            <li><a class="dropdown-item" href="#">512go</a></li>
+            <li><a class="dropdown-item" href="#">1to</a></li>
+            <li><a class="dropdown-item" href="#">2to</a></li>
+            </ul>
+        </div>
+
+        <div class="dropdown mx-4 my-2 col-sm-3 px-5 ">
+            <button class="dropdown-toggle btn-lg btn-filter" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Catégorie
+            </button>
+            <ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Caméra de surveillance</a></li>
+            <li><a class="dropdown-item" href="#">Caméra espion</a></li>
+            <li><a class="dropdown-item" href="#">Enregistreur Vocal</a></li>
+            <li><a class="dropdown-item" href="#">Stockage</a></li>
+            <li><a class="dropdown-item" href="#">Accessoires</a></li>
+            </ul>
+        </div>
+
+        <div class="dropdown mx-4 my-2 col-sm-3 px-5 ">
+            <button class="dropdown-toggle btn-lg btn-filter" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Couleur 
+            </button>
+            <ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Noir</a></li>
+            <li><a class="dropdown-item" href="#">Blanc</a></li>
+            <li><a class="dropdown-item" href="#">Gris</a></li>
+            <li><a class="dropdown-item" href="#">Rouge</a></li>
+            </ul>
+        </div>
+
+        <div class="dropdown mx-4 my-2 col-sm-3 px-5 ">
+            <button class="dropdown-toggle btn-lg btn-filter" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Communication
+            </button>
+            <ul class="dropdown-menu p-0" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Filaire</a></li>
+            <li><a class="dropdown-item" href="#">Bluetooth</a></li>
+            <li><a class="dropdown-item" href="#">Wi-Fi</a></li>
+            </ul>
+        </div>
+        </div>
+
+        </div>
+{% endblock %}
+{% block content %}
+  {% if produit_list %}
+  <div class="container-fluid h-100 w-100 d-flex flex-column justify-content-center align-items-center p-5">
+    <div class="row w-100 px-5 justify-content-center align-items-center">
+
+      <div class="card cardProduct col-sm-4 border-1 justify-content-center align-items-center">
+        <img class="card-img-top imgProductList" src="https://audiotec.fr/wp-content/uploads/2020/08/Konftel-Cam50.png" alt="">
+        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+          <h4 class="card-title text-center">Lorem, ipsum dolor.</h4>
+          <p class="card-text text-center my-1">Lorem ipsum dolor sit amet consectetur.</p>
+          <p class="card-text text-center  my-1"><span>Lorem</span> - <span>dolor</span> - <span>amet</span></p>
+          <p class="card-text text-center my-1">Lorem ipsum dolor</p>
+          <button class="btn bg-dark text-white rounded rounded-4">Acheter</button>
+        </div>
+      </div>
+
+      <div class="card cardProduct col-sm-4 border-1 justify-content-center align-items-center">
+        <img class="card-img-top imgProductList" src="https://audiotec.fr/wp-content/uploads/2020/08/Konftel-Cam50.png" alt="">
+        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+          <h4 class="card-title text-center">Lorem, ipsum dolor.</h4>
+          <p class="card-text text-center my-1">Lorem ipsum dolor sit amet consectetur.</p>
+          <p class="card-text text-center  my-1"><span>Lorem</span> - <span>dolor</span> - <span>amet</span></p>
+          <p class="card-text text-center my-1">Lorem ipsum dolor</p>
+          <button class="btn bg-dark text-white rounded rounded-4">Acheter</button>
+        </div>
+      </div>
+
+      <div class="card cardProduct col-sm-4 border-1 justify-content-center align-items-center">
+        <img class="card-img-top imgProductList" src="https://audiotec.fr/wp-content/uploads/2020/08/Konftel-Cam50.png" alt="">
+        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+          <h4 class="card-title text-center">Lorem, ipsum dolor.</h4>
+          <p class="card-text text-center my-1">Lorem ipsum dolor sit amet consectetur.</p>
+          <p class="card-text text-center  my-1"><span>Lorem</span> - <span>dolor</span> - <span>amet</span></p>
+          <p class="card-text text-center my-1">Lorem ipsum dolor</p>
+          <button class="btn bg-dark text-white rounded rounded-4">Acheter</button>
+        </div>
+      </div>
+
+      <div class="card cardProduct col-sm-4 border-1 justify-content-center align-items-center">
+        <img class="card-img-top imgProductList" src="https://audiotec.fr/wp-content/uploads/2020/08/Konftel-Cam50.png" alt="">
+        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+          <h4 class="card-title text-center">Lorem, ipsum dolor.</h4>
+          <p class="card-text text-center my-1">Lorem ipsum dolor sit amet consectetur.</p>
+          <p class="card-text text-center  my-1"><span>Lorem</span> - <span>dolor</span> - <span>amet</span></p>
+          <p class="card-text text-center my-1">Lorem ipsum dolor</p>
+          <button class="btn bg-dark text-white rounded rounded-4">Acheter</button>
+        </div>
+      </div>
+
+      <div class="card cardProduct col-sm-4 border-1 justify-content-center align-items-center">
+        <img class="card-img-top imgProductList" src="https://audiotec.fr/wp-content/uploads/2020/08/Konftel-Cam50.png" alt="">
+        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+          <h4 class="card-title text-center">Lorem, ipsum dolor.</h4>
+          <p class="card-text text-center my-1">Lorem ipsum dolor sit amet consectetur.</p>
+          <p class="card-text text-center  my-1"><span>Lorem</span> - <span>dolor</span> - <span>amet</span></p>
+          <p class="card-text text-center my-1">Lorem ipsum dolor</p>
+          <button class="btn bg-dark text-white rounded rounded-4">Acheter</button>
+        </div>
+      </div>
+
+      <div class="card cardProduct col-sm-4 border-1 justify-content-center align-items-center">
+        <img class="card-img-top imgProductList" src="https://audiotec.fr/wp-content/uploads/2020/08/Konftel-Cam50.png" alt="">
+        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+          <h4 class="card-title text-center">Lorem, ipsum dolor.</h4>
+          <p class="card-text text-center my-1">Lorem ipsum dolor sit amet consectetur.</p>
+          <p class="card-text text-center  my-1"><span>Lorem</span> - <span>dolor</span> - <span>amet</span></p>
+          <p class="card-text text-center my-1">Lorem ipsum dolor</p>
+          <button class="btn bg-dark text-white rounded rounded-4">Acheter</button>
+        </div>
+      </div>
+
+      <div class="card cardProduct col-sm-4 border-1 justify-content-center align-items-center">
+        <img class="card-img-top imgProductList" src="https://audiotec.fr/wp-content/uploads/2020/08/Konftel-Cam50.png" alt="">
+        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+          <h4 class="card-title text-center">Lorem, ipsum dolor.</h4>
+          <p class="card-text text-center my-1">Lorem ipsum dolor sit amet consectetur.</p>
+          <p class="card-text text-center  my-1"><span>Lorem</span> - <span>dolor</span> - <span>amet</span></p>
+          <p class="card-text text-center my-1">Lorem ipsum dolor</p>
+          <button class="btn bg-dark text-white rounded rounded-4">Acheter</button>
+        </div>
+      </div>
+
+      <div class="card cardProduct col-sm-4 border-1 justify-content-center align-items-center">
+        <img class="card-img-top imgProductList" src="https://audiotec.fr/wp-content/uploads/2020/08/Konftel-Cam50.png" alt="">
+        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+          <h4 class="card-title text-center">Lorem, ipsum dolor.</h4>
+          <p class="card-text text-center my-1">Lorem ipsum dolor sit amet consectetur.</p>
+          <p class="card-text text-center  my-1"><span>Lorem</span> - <span>dolor</span> - <span>amet</span></p>
+          <p class="card-text text-center my-1">Lorem ipsum dolor</p>
+          <button class="btn bg-dark text-white rounded rounded-4">Acheter</button>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+  {% else %}
+    <p>Aucun produit correspondant !</p>
+  {% endif %} 
+</section>
+{% endblock %}
